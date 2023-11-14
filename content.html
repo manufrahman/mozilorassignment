@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scripts & Iframes</title>
+    <!-- Google Analytics - Start -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- Google Analytics - END -->
+    <!-- Soundcloud - Start -->
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+    <script>
+        SC.initialize({
+            client_id: 'YOUR_CLIENT_ID',
+            redirect_uri: 'https://example.com/callback'
+        });
+        SC.connect().then(function () {
+            return SC.get('/me');
+        }).then(function (me) {
+            alert('Hello, ' + me.username);
+        });
+    </script>
+    <!-- Soundcloud - END -->
+</head>
+
+<body>
+    <!-- Google Adsense - Start -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+        data-ad-client="ca-pub-1234567890123456" data-ad-slot="1234567890"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <!-- Google Adsense - END -->
+    <!-- Youtube - Start -->
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+        src="https://www.youtube.com/embed/MswordkJksdNm7lc1UVf-VE" frameborder="0" allowfullscreen>
+    <!-- Youtube - END -->
+</body>
+
+</html>
